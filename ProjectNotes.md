@@ -38,6 +38,19 @@ calculate a rough estimate of how much memory the dataset will require
 in memory before reading into R. Make sure your computer has enough
 memory (most modern computers should be fine).
 
+Memory calculation:
+
+The zip file is 20.6 MB. If we don't have the disk space to unzip this, we have a problem. 
+A zipped text file will be compressed to roughly 20% of its original size - here, the uncompressed data should be about 100 Mb. I won't discuss further the options to zip which affect the compression. Google "zip compression" if you need the gory details - space vs time. The file unzipped to roughly 130Mb.
+
+I used a korn shell script to filter the unzipped data to a row with the column headings and rows for the two dates required for this analysis. (See filter.sh for the details. It documents the misinformation provided in the spec of the original data.)
+
+The script uses a pipeline, so the total volume of the full dataset is not really relevant with respect to machine memory, except that I will need some very small fraction of it (2 days out of 4 * 365 days) for disk storage. 
+
+The data should be reduced to roughly 1 / 2*365 or 1 / 730th of the original data. The memory required by the pipeline is minimal, since it deals with only a single row at a time. the resulting filtered data set was 183,447 bytes in 2880 rows plus the row with the column headings.
+
+Each row needs a date-time object and 7 floating point objects. Let's round 2880 to 3000. We need memory for 3000 rows. Assuming floats are like doubles (8 bytes and a datetime is worth 20 bytes lets round per row memory to 80 bytes.) An in-memory representation should be approximately 240,000 bytes. We could probably handle that data on a computer from the late 80's, but it might not have had the network capacity for a "download.
+
 * We will only be using data from the dates 2007-02-01 and
 2007-02-02. One alternative is to read the data from just those dates
 rather than reading in the entire dataset and subsetting to those
