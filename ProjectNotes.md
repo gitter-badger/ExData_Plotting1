@@ -61,7 +61,7 @@ Each row needs a date-time object and 7 floating point objects. Let's round 2880
 rather than reading in the entire dataset and subsetting to those
 dates.
 
-Correct. See the calculations performed above.
+<b>Correct. See the calculations performed above.</b>
 
 * You may find it useful to convert the Date and Time variables to
 Date/Time classes in R using the `strptime()` and `as.Date()`
