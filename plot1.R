@@ -1,9 +1,7 @@
-# charts.R - chart power information for Feb 1-2, 2007
+# plot1.R - Global Active Power frequency for Feb 1-2, 2007
 
 cols <- c ("character", "character", rep ('numeric', 7))
-df <- read.csv ('power.txt', sep = ';', na.strings = '?', colClasses=cols)
-df$Date <- NULL
-df$Time <- NULL
+df   <- read.csv ('power.txt', sep = ';', na.strings = '?', colClasses=cols)
 
 png(filename = "plot1.png",
     width = 480, height = 480, units = "px", pointsize = 12,
