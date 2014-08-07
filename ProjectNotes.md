@@ -39,7 +39,7 @@ in memory before reading into R. Make sure your computer has enough
 memory (most modern computers should be fine).
 
 ===================
-Memory calculation:
+<b>Memory calculation:</b>
 ===================
 
 The zip file is 20.6 MB. If we don't have the disk space to unzip this, we have a problem. 
