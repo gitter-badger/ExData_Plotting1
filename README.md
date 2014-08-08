@@ -1,3 +1,18 @@
+I have left this file pretty much intact.
+
+Please see <a href='https://github.com/fm75/ExData_Plotting1/blob/master/ProjectNotes.md'> ProjectNotes.md</a> if you would like to see the notes I made on this project
+
+They can be found in the "Memory calculation:" section.
+
+You will also find filter.sh and power.txt in the repo. power.txt was created by running filter.sh against the unzipped data file. filter.sh has some comments on the timing of the filtering process as well.
+
+Contents:
+plot1.R, plot2.R, plot3.R, plot4.R 
+and the corresponding .png files are also in the repo. 
+
+
+
+
 ## Introduction
 
 This assignment uses data from
