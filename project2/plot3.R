@@ -33,6 +33,7 @@ plotView <- function (annual)
         ggplot (annual, 
                 aes(x=factor(Year), y=Emissions)) +
                 geom_bar(stat="identity", fill='blue') +
+                facet_grid (. ~ Source) +
                 xlab ("Year") +
                 ylab ("PM 2.5 Emissions in tons") +
                 ggtitle ("'Baltimore MD PM-25 Emissions by Source'") 
