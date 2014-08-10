@@ -30,9 +30,13 @@ plotView <- function (annual)
        bg = "white",  res = NA) 
   
   print (
-        qplot (Year, Emissions, data=annual, facets=Source~., 
-               main = 'Baltimore MD PM-25 Emissions by Source',
-               ylab = 'Emissions in tons')
+        ggplot (annual, 
+                aes(x=factor(Year), y=Emissions)) +
+                geom_bar(stat="identity", fill='blue') +
+                xlab ("Year") +
+                ylab ("PM 2.5 Emissions in tons") +
+                ggtitle ("'Baltimore MD PM-25 Emissions by Source'") 
+  
         ) 
  
   dev.off ()
