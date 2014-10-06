@@ -14,6 +14,7 @@ and the corresponding .png files are also in the repo.
 
 
 ## Introduction
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/fm75/ExData_Plotting1?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 This assignment uses data from
 the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
